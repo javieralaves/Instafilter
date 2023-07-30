@@ -57,7 +57,7 @@ struct ContentView: View {
                     HStack {
                         Text("Radius")
                             .frame(width: 70, alignment: .leading)
-                        Slider(value: $filterRadius)
+                        Slider(value: $filterRadius, in: 0...200)
                             .onChange(of: filterRadius) { _ in applyProcessing() }
                     }
                     .padding(.bottom)
@@ -67,7 +67,7 @@ struct ContentView: View {
                     HStack {
                         Text("Scale")
                             .frame(width: 70, alignment: .leading)
-                        Slider(value: $filterScale)
+                        Slider(value: $filterScale, in: 0...10)
                             .onChange(of: filterScale) { _ in applyProcessing() }
                     }
                     .padding(.bottom)
